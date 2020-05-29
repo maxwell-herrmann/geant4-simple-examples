@@ -109,6 +109,7 @@ void NXPhysicsList::ConstructEM()
   
   // Add standard EM Processes
   //
+  auto theParticleIterator=GetParticleIterator();
   theParticleIterator->reset();
   while( (*theParticleIterator)() ){
     G4ParticleDefinition* particle = theParticleIterator->value();

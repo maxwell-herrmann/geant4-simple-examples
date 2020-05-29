@@ -22,8 +22,6 @@
 
 #include "G4NistManager.hh"
 
-#include "G4SystemOfUnits.hh"
-
 NXUserDetectorConstruction::NXUserDetectorConstruction() :
     solidWorld(0),  logicWorld(0),  physiWorld(0),
     solidTarget(0), logicTarget(0), physiTarget(0), 

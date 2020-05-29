@@ -10,6 +10,8 @@
 #define EHIGH 10
 //#include "NXRunAction.hh"
 
+#include "G4SystemOfUnits.hh"
+
 NXSensitiveDetector::NXSensitiveDetector(G4String name) :
     G4VSensitiveDetector(name)
 {
@@ -64,13 +66,13 @@ G4bool NXSensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
 	}
 	double e = (kineticEnergyCur / keV - ELOW) / (EHIGH - ELOW) * NENERGY;
 	int ebin = (int) e;
-	double theta = pointPre->GetPosition().theta() - pi / 2;
-	if (theta > pi / 2)
-		theta -= pi / 2;
+	double theta = pointPre->GetPosition().theta() - 3.14159265358979323846 / 2;
+	if (theta > 3.14159265358979323846 / 2)
+		theta -= 3.14159265358979323846 / 2;
 	if (theta < 0)
-		theta += pi / 2;
+		theta += 3.14159265358979323846 / 2;
 	
-	int thetabin = (int)(theta / (pi / 2) * NTHETA);
+	int thetabin = (int)(theta / (3.14159265358979323846 / 2) * NTHETA);
 	//G4cout << "   storing in " << ebin << " | " << 
 	//	pointPre->GetPosition().theta() << " -> " << thetabin <<
 	//	G4endl;

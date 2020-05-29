@@ -8,8 +8,6 @@
 #include "G4RunManager.hh"
 //#include "NXRunAction.hh"
 
-#include "G4SystemOfUnits.hh"
-
 NXSensitiveDetector::NXSensitiveDetector(G4String name) :
     G4VSensitiveDetector(name)
 {

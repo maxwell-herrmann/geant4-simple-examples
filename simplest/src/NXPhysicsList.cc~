@@ -90,7 +90,7 @@ void NXPhysicsList::ConstructProcess()
 void NXPhysicsList::ConstructEM()
 {
     G4cout<<"NXPhysicsList::ConstructEM"<<G4endl;
-    auto theParticleIterator=GetParticleIterator();
+    theParticleIterator=GetParticleIterator();
     theParticleIterator->reset();
     while( (*theParticleIterator)() ){
         G4ParticleDefinition* particle = theParticleIterator->value();

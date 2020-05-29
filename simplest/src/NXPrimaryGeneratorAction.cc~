@@ -40,7 +40,7 @@ void NXPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 { 
     G4cout<<"NXPrimaryGeneratorAction: shooting "<<G4endl;
     particleGun->SetParticleMomentumDirection(G4ThreeVector(0,0,1));
-    particleGun->SetParticleEnergy(2.*keV);
+    particleGun->SetParticleEnergy(0.002*MeV);
     particleGun->GeneratePrimaryVertex(anEvent);
 }
 
